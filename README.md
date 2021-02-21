@@ -1,6 +1,8 @@
 # webdjango
 Código desenvolvido no módulo de Django do curso Python Pro
 
+Aplicação disponível em https://webprodjango.herokuapp.com/ 
+
 [![Build Status](https://travis-ci.com/faleite/webdjango.svg?branch=master)](https://travis-ci.com/faleite/webdjango)
 [![codecov](https://codecov.io/gh/faleite/webdjango/branch/master/graph/badge.svg?token=C6PEEAMAAA)](https://codecov.io/gh/faleite/webdjango)
 [![Updates](https://pyup.io/repos/github/faleite/webdjango/shield.svg)](https://pyup.io/repos/github/faleite/webdjango/)
