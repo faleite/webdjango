@@ -11,11 +11,8 @@ env:
     - PIPENV_IGNORE_VETUALENVS=1
 
 install:
-  - pip install -q pipenv codecov
-  - pipenv sync --dev
+  - pip install -q pipenv
+  - pipenv sync -d
 
 script:
   - pipenv run flake8 .
-
-after_success:
-  - codecov
