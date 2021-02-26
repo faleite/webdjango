@@ -6,7 +6,7 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
 
-class UserManager(BaseUserManager):
+class UserManager(BaseUserManager):   # pragma: no cover
     use_in_migrations = True
 
     def _create_user(self, email, password, **extra_fields):
@@ -37,7 +37,7 @@ class UserManager(BaseUserManager):
         return self._create_user(email, password, **extra_fields)
 
 
-class User(AbstractBaseUser, PermissionsMixin):
+class User(AbstractBaseUser, PermissionsMixin):   # pragma: no cover
     """
     App base User class.
 
@@ -79,7 +79,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         """
         Return the first_name plus the last_name, with a space in between.
         """
-        full_name = '%s' % (self.first_name)
+        full_name = '%s' % self.first_name
         return full_name.strip()
 
     def get_short_name(self):
