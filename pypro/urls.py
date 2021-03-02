@@ -21,9 +21,9 @@ from pypro.base.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
+    path('', home, name='home'),
 ]
 
-if settings.DEBUG:  # pragma: no cover
+if settings.DEBUG:
     import debug_toolbar
     urlpatterns.append(path('__debug__/', include(debug_toolbar.urls)))

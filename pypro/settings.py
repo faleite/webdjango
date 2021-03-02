@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'pypro.wsgi.application'
 
 INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
 
-if DEBUG:  # pragma: no cover
+if DEBUG:
     INSTALLED_APPS.append('debug_toolbar')
     MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
 
@@ -145,7 +145,7 @@ AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 # STORAGE CONFIGURATION IN S3 AWS
 # -------------------------------------------------------------------------------
 
-if AWS_ACCESS_KEY_ID:  # pragma: no cover
+if AWS_ACCESS_KEY_ID:
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }
@@ -178,7 +178,7 @@ if AWS_ACCESS_KEY_ID:  # pragma: no cover
 
 SENTRY_DSN = config('SENTRY_DSN', default=None)
 
-if SENTRY_DSN:  # pragma: no cover
+if SENTRY_DSN:
     sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()], traces_sample_rate=1.0, send_default_pii=True)
     # If you wish to associate users to errors (assuming you are using
     # django.contrib.auth) you may enable sending PII data.
