@@ -12,4 +12,4 @@ services:
       - POSTGRES_PASSWORD=pythonpro
       - POSTGRES_USER=pythonpro
     ports:
-      - 5434:5432
+      - 5433:5432
