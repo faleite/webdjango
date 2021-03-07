@@ -25,7 +25,7 @@ sensitive_post_parameters_m = method_decorator(sensitive_post_parameters())
 
 
 @admin.register(User)
-class UserAdmin(admin.ModelAdmin):  # pragma: no cover
+class UserAdmin(admin.ModelAdmin):
     add_form_template = 'admin/auth/user/add_form.html'
     change_user_password_template = None
     fieldsets = (
